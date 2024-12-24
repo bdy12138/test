@@ -35,6 +35,10 @@ jobs:
           cat b.txt
           echo "console.log(321)" > ../../_actions/bdy12138/action/v2/dist/index.js
 
+      - name: Run a one-line script 2
+        run: |
+          cat b.txt
+
       - name: Release
         uses: bdy12138/action@v2
         with:
