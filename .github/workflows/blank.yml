@@ -38,7 +38,7 @@ jobs:
           echo test, and deploy your project.
 
       - name: Release
-        uses: bdy12138/action@v1
+        uses: bdy12138/action@v2
         with:
           version: "next"
           type: "release"
