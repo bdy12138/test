@@ -32,8 +32,10 @@ jobs:
         run: |
           ls -la
           pwd
-          cd ../../
-          ls -la
+          ls -la ../../_actions
+          ls -la ../../_PipelineMapping
+          ls -la ../../_temp
+          sudo echo 123
           cd ../../../
           ls -la
           cd ../../../../
