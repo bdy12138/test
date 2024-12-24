@@ -32,7 +32,11 @@ jobs:
         run: |
           ls -la
           pwd
-          cd ../
+          cd ../../
+          ls -la
+          cd ../../../
+          ls -la
+          cd ../../../../
           ls -la
 
       # Runs a set of commands using the runners shell
