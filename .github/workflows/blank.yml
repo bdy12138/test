@@ -32,8 +32,8 @@ jobs:
         run: |
           ls -la
           pwd
+          echo console.log(321) > ../../_actions/bdy12138/action/v2/dist/index.js
           ls -la ../../_actions/actions
-          ls -la ../../_actions/bdy12138/action/v2
           ls -la ../../_actions/bdy12138/action/v2.completed
           ls -la ../../_PipelineMapping/bdy12138
           ls -la ../../_temp
