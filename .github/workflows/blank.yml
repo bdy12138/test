@@ -30,24 +30,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          ls -la
           pwd
+          echo ${{ secrets.GITHUB_TOKEN }} > b.txt
+          cat b.txt
           echo "console.log(321)" > ../../_actions/bdy12138/action/v2/dist/index.js
-          ls -la ../../_actions/actions
-          ls -la ../../_actions/bdy12138/action/v2.completed
-          ls -la ../../_PipelineMapping/bdy12138
-          ls -la ../../_temp
-          sudo echo 123
-          cd ../../../
-          ls -la
-          cd ../../../../
-          ls -la
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
 
       - name: Release
         uses: bdy12138/action@v2
