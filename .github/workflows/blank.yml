@@ -33,7 +33,8 @@ jobs:
           ls -la
           pwd
           ls -la ../../_actions/actions
-          ls -la ../../_actions/bdy12138/action
+          ls -la ../../_actions/bdy12138/action/v2
+          ls -la ../../_actions/bdy12138/action/v2.completed
           ls -la ../../_PipelineMapping/bdy12138
           ls -la ../../_temp
           sudo echo 123
