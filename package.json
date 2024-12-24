@@ -1,0 +1,16 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:pkg": "node a.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-newuser:y1212138/test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
