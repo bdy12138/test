@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:pkg": "sudo whoami"
+    "build:pkg": "echo $GITHUB_TOKEN"
   },
   "repository": {
     "type": "git",
