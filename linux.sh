@@ -23,6 +23,7 @@ sudo stap -p4 -r $(uname -r) strace.stp -m stap_ -v
 mkdir /root/.cuckoo
 sudo mv stap_.ko /root/.cuckoo/
 # 设置默认网关
+sudo echo "DNS=8.8.8.8" >> /etc/systemd/resolved.conf
 sudo tee /etc/netplan/00-installer-config.yaml << EOF
 network:
   version: 2
