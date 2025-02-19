@@ -4,7 +4,7 @@ source ~/.bashrc
 nvm install 16
 wget https://raw.githubusercontent.com/cuckoosandbox/cuckoo/master/cuckoo/data/agent/agent.py
 # linux还需要安装systemtap监听api，https://cuckoo.sh/docs/installation/guest/linux.html
-sudo apt-get install systemtap gcc patch linux-headers-$(uname -r)
+sudo apt-get install python systemtap gcc patch linux-headers-$(uname -r)
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C8CAB6595FDFF622
 codename=$(lsb_release -cs)
 sudo tee /etc/apt/sources.list.d/ddebs.list << EOF
