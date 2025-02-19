@@ -22,6 +22,25 @@ wget https://raw.githubusercontent.com/cuckoosandbox/cuckoo/master/stuff/systemt
 sudo stap -p4 -r $(uname -r) strace.stp -m stap_ -v
 mkdir /root/.cuckoo
 sudo mv stap_.ko /root/.cuckoo/
+# 设置默认网关
+sudo tee /etc/netplan/00-installer-config.yaml << EOF
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: no
+      dhcp6: no
+      optional: true
+    enp0s8:
+      dhcp4: no
+      addresses:
+        - 192.168.56.112/24
+      routes:
+        - to: 0.0.0.0/0
+          via: 192.168.56.1
+EOF
+sudo netplan apply
+ip link set enp0s3 down
 # 关掉防火墙和NTP
 sudo ufw disable
 sudo timedatectl set-ntp off
